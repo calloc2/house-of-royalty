@@ -9,4 +9,15 @@
     <a mat-button href="#about">About</a>
     <a mat-button href="#contact">Contact</a>
   </nav>
+  <button mat-icon-button class="burger" (click)="sidenav.toggle()" aria-label="Open menu">
+    <img src="/assets/burger.png" alt="Menu" width="28" height="28" />
+  </button>
 </mat-toolbar>
+
+<mat-sidenav-container class="mobile-sidenav-container">
+  <mat-sidenav #sidenav mode="over" position="end" class="mobile-sidenav">
+    <a mat-list-item href="#portfolio" (click)="sidenav.close()">Portfolio</a>
+    <a mat-list-item href="#about" (click)="sidenav.close()">About</a>
+    <a mat-list-item href="#contact" (click)="sidenav.close()">Contact</a>
+  </mat-sidenav>
+</mat-sidenav-container>
