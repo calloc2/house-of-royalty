@@ -43,6 +43,9 @@
   .burger {
     display: none;
     color: #fff;
+    img {
+      filter: brightness(0) invert(1);
+    }
   }
 }
 

@@ -7,7 +7,7 @@ import { MatDivider } from '@angular/material/divider';
   selector: 'app-contact',
   imports: [MatCard,
     MatIcon,
-    MatDivider,
+    MatDivider
   ],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
