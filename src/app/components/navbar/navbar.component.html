@@ -1,0 +1,23 @@
+<mat-toolbar color="primary" class="navbar">
+  <span class="logo">
+    <img src="/assets/logoround.png" alt="House of Royalty Logo" class="logo-img" />
+    <span class="logo-text">House of Royalty</span>
+  </span>
+  <span class="spacer"></span>
+  <nav class="nav-links">
+    <a mat-button href="#portfolio">Portfolio</a>
+    <a mat-button href="#about">About</a>
+    <a mat-button href="#contact">Contact</a>
+  </nav>
+  <button mat-icon-button class="burger" (click)="sidenav.toggle()" aria-label="Open menu">
+    <img src="/assets/burger.png" alt="Menu" width="28" height="28" />
+  </button>
+</mat-toolbar>
+
+<mat-sidenav-container class="mobile-sidenav-container">
+  <mat-sidenav #sidenav mode="over" position="end" class="mobile-sidenav">
+    <a mat-list-item href="#portfolio" (click)="sidenav.close()">Portfolio</a>
+    <a mat-list-item href="#about" (click)="sidenav.close()">About</a>
+    <a mat-list-item href="#contact" (click)="sidenav.close()">Contact</a>
+  </mat-sidenav>
+</mat-sidenav-container>

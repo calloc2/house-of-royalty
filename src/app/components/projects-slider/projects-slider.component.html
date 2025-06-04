@@ -1,0 +1,17 @@
+<section id="portfolio" class="projects">
+  <h2>Our Projects</h2>
+  <div class="project-grid">
+    <img *ngFor="let img of images"
+         [src]="img.src"
+         [alt]="img.alt"
+         (click)="openImage(img)" />
+  </div>
+
+  <div class="modal" *ngIf="focusedImage" (click)="closeImage()">
+    <img class="modal-img"
+         [src]="focusedImage!.src"
+         [alt]="focusedImage!.alt"
+         (click)="$event.stopPropagation()" />
+    <button class="close-btn" (click)="closeImage()">&times;</button>
+  </div>
+</section>
